@@ -21,6 +21,20 @@
                 </div>
                 <div class="product-info">
                     <h1>{{ product }}</h1>
+
+                    <!-- If-else condition -->
+                    <!-- <p v-if="inStock">In stock</p>
+                    <p v-else>Out of Stocks</p> -->
+
+                    <!-- Show/hide -->
+                    <p v-show="inStock">In stock</p>
+
+                    <!-- if/else conditional -->
+                    <p v-if="inventory > 10">In stock</p>
+                    <p v-else-if="inventory <= 10 && inventory > 0">alots of stocks </p>
+                    <p v-else>Out of Stocks</p>
+
+
                 </div>
                 <a :href="href">Button</a>
             </div>

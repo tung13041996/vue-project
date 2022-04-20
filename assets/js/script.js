@@ -3,7 +3,9 @@ const app = Vue.createApp({
         return {
             product: 'Socks',
             image: './assets/image/blue-socks.png',
-            href: 'https://vuejs.org/'
+            href: 'https://vuejs.org/',
+            inStock: true,
+            inventory:0,
         }
     }
 })
