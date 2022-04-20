@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/vue@3"></script>
 </head>
 <body>
 
-<h1>Hello world!</h1>
+    <h1 id="app">{{ firstName + ' ' + lastName }}</h1>
 
 <script src="assets/js/script.js"></script>
+<script>
+    const mountedApp = app.mount('#app');
+  </script>
 </body>
 </html>
