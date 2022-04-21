@@ -57,6 +57,8 @@ app.component('product-display', {
             </div>
             
         </div>
+        <review-list v-if="reviews.length" :reviews = "reviews"></review-list>
+        <review-form @review-submitted = "addReview"></review-form>
     </div>`,
     data() {
         return {
@@ -72,6 +74,7 @@ app.component('product-display', {
             ],
             cartShow: 0,
             disabledButton: '',
+            reviews: [],
         }
     },
     computed: {
@@ -112,5 +115,8 @@ app.component('product-display', {
             }
             this.statusBtn();
         },
+        addReview(review) {
+            this.reviews.push(review);
+        }
     }
 })
