@@ -62,8 +62,10 @@ app.component('product-display', {
     </div>`,
     data() {
         return {
+
             product: 'Socks',
             brand: 'Nike',
+            image: './assets/image/black-socks.png',
             selectedVariant:0,
             href: 'https://vuejs.org/',
             inventory:0,
@@ -75,6 +77,7 @@ app.component('product-display', {
             cartShow: 0,
             disabledButton: '',
             reviews: [],
+            cart:0
         }
     },
     computed: {

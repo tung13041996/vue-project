@@ -127,23 +127,15 @@ ul.product-color li:not(:last-child) {
     border:1px solid rgba(112,112,112,.2);
     background:#fbfbfb;
 }
-.review-form input, .review-form label,
+.review-form input,
 .review-form textarea, .review-form select {
     display: block; width: 100%;
+    margin-bottom: 30px;
+    height: 50px;
 }
-/* .review-form label {
+.review-form label {
     font-weight: 500;
     font-size: 16px;
     margin-bottom: 5px;
+    display: block;
 }
-.review-form input, .review-form textarea {
-    background: #fff;
-    color: #1d1b1b;
-    font-size: 16px;
-    height: 52px;
-    padding: 5px 25px;
-    -webkit-appearance: none;
-    border-radius: 10px;
-    border: 1px solid rgba(112,112,112,.2);
-    transition: all .3s ease;
-} */
