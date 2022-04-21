@@ -2,18 +2,29 @@ const app = Vue.createApp({
     data() {
         return {
             product: 'Socks',
-            image: './assets/image/blue-socks.png',
+            brand: 'Nike',
+            selectedVariant:0,
             href: 'https://vuejs.org/',
             inventory:0,
             details: ['50% cottons', '30% wool', '20% polyester'],
             variants: [
-                {id: 2234, color:'black', img:'./assets/image/black-socks.png'},
-                {id: 2235, color:'blue', img: './assets/image/blue-socks.png'}
+                {id: 2234, color:'black', img:'./assets/image/black-socks.png', quantity:50},
+                {id: 2235, color:'blue', img: './assets/image/blue-socks.png', quantity:0}
             ],
             cart: 0,
             cartShow: 0,
             disabledButton: '',
-            inStock: this.cart > 0,
+        }
+    },
+    computed: {
+        title() {
+            return this.brand + ' - ' + this.product
+        },
+        imageProperties() {
+            return this.variants[this.selectedVariant].img;
+        },
+        inStock() {
+            return this.variants[this.selectedVariant].quantity;
         }
     },
     methods: {
@@ -21,11 +32,11 @@ const app = Vue.createApp({
             if (this.cart > 0) {this.cartShow = this.cart;}
             this.statusBtn();
         },
-        updateImage(variantsImage) {
-            this.image = variantsImage;
+        updateVariant(index) {
+            this.selectedVariant = index;
         },
         statusBtn() {
-            this.inStock= this.cart > 0;
+            return this.cart > 0;
         },
         increaseCart() {
             this.cart += 1;
@@ -36,6 +47,6 @@ const app = Vue.createApp({
                 this.cart -= 1;
             }
             this.statusBtn();
-        }
+        },
     }
 })

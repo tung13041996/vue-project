@@ -21,7 +21,7 @@
                     <img :src="image" alt="">
                 </div>
                 <div class="product-info">
-                    <h1>{{ product }}</h1>
+                    <h1>{{ title }}</h1>
 
                     <!-- If-else condition -->
                     <!-- <p v-if="inStock">In stock</p>
@@ -42,9 +42,9 @@
                     </ul>
 
                     <ul class="product-color">
-                        <li v-for="variant in variants"
+                        <li v-for="(variant, index) in variants"
                             :key="variant.id"
-                            @mouseover="updateImage(variant.img)"
+                            @mouseover="updateVariant(index)"
                             :style="{backgroundColor:variant.color}">{{ variant.color }}</li>
                     </ul>
 
