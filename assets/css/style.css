@@ -1,1 +1,86 @@
-body {background-color:cornflowerblue; color:#fff;}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto",sans-serif;
+}
+.nav-bar {
+    min-height: 100px;
+}
+.product-container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.product-inner {
+    display: flex;
+    position: relative;
+}
+.product-image {
+    width: 40%;
+    padding: 20px;
+    border:1px solid rgba(112,112,112,.2);
+}
+.product-image img {
+    background-color: #eee;
+    width: 100%;
+}
+.product-info {
+    padding-left: 40px;
+    padding-right: 100px;
+    width: 60%;
+}
+.btn_primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 120px;
+    min-height: 52px;
+    border-radius: 50px;
+    background: blueviolet;
+    text-decoration: none;
+    color:#fff;
+    padding: 5px 25px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.btn_primary:hover {
+    background: skyblue;
+    color:#1d1b1b;
+}
+.product-cart {
+    position: absolute;
+    top:0;
+    right:0;
+    width: 100px;
+    padding: 15px;
+    background: lightgray;
+    border-radius: 10px;
+    text-align: center;
+}
+.group-button {
+    margin-bottom: 30px;
+    display: flex;
+}
+.btn_number.descrease {
+    border-radius: 4px 0 0 4px;
+}
+.btn_number.increase {
+    border-radius: 0 4px 4px 0;
+}
+.btn_number {
+    background-color: transparent;
+    width: 30px;
+    height:30px;
+    border:1px solid lightgray;
+    cursor: pointer;
+}
+.group-button span {
+    padding: 3.5px 15px;
+    font-weight: 500;
+    border-top:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+}
